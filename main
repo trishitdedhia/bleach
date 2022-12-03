@@ -1,0 +1,51 @@
+#!/bin/bash
+
+#DEFAULT IMAGE TO SAVE
+save="output.png"
+
+while (( $# > 0 ))
+do
+
+    if [[ $1 == "--help" || $1 == "-h" ]]
+    then
+        cat .help
+        exit 0
+
+    elif [[ $1 == "--version" || $1 == "-v" ]]
+    then
+        cat .version
+        exit 0
+    elif [[ $1 == "-s" || $1 == "--save" ]]
+    then
+        echo "saving"
+        if (( $# >= 2 ))
+        then
+            echo $1
+            save=$2
+            shift 2
+            echo $1
+        else
+            echo "File to save image not corrctly specified."
+            exit 1
+        fi
+        echo "done saving"
+
+    elif [[ $# == 1 ]]
+    then
+        if [[ -f $1 ]]
+        then
+            #echo "Hello"
+            python3 bleach.py $1 $save
+            exit 0
+        else
+            echo "File '$1' not found."
+            exit 1
+        fi
+    else
+        echo "Invalid usage."
+        echo "Use the '--help' flag to learn more."
+        exit 1
+    fi
+
+done
+
