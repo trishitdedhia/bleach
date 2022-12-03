@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Save path
+path=`dirname $BASH_SOURCE`
+
 #DEFAULT IMAGE TO SAVE
 save="output.png"
 
@@ -35,7 +38,7 @@ do
         if [[ -f $1 ]]
         then
             #echo "Hello"
-            python3 bleach.py $1 $save
+            python3 $path/bleach.py $1 $save
             exit 0
         else
             echo "File '$1' not found."
