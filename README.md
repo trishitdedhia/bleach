@@ -1,4 +1,4 @@
-# Bleach
+# Bleach v1.0.1
 Part of the image processing libraries used by Karla. Bleach allows the user to wash all pixels in an image to a specific colour while retaing alpha (opacity) values. Typically designed to change icon colours.
 
 ### Using Karla
