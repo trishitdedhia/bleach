@@ -1,28 +1,8 @@
-.TH Bleach
-.TP HELLO
+Bleach (made by Trishit Dedhia) version 1.0
 
-.SH NAME
-Bleach (built by Trishit Dedhia) version 1.0
+Part of the Image processing libraries used by Karla.
 
-.SH SYPNOSIS
-karla bleach --version
+Bleach sets the RGB values of all pixels in the input image to user defined values while keeping the alpha values the same. This library is ideal for changing the colours of icons.
 
-karla bleach --help\n
-
-\fBkarla bleach\fP [OPTIONS] \fB<image>\fP
-
-
-.SH DESCRIPTION
-Bleach is part of the imaging libraries of Karla 1.0.
-
-Bleach allows you to wash all pixels in an image with a colour of your choice while retaining every pixels' alpha (opacity value)
-
-The program will ask you for the colour you want to bleach the image with when it runs.
-
-.SH SEE ALSO
-Please see official documentation of Karla and Bleach on github.
-
-Karla - \fIhttps://github.com/trishitdedhia/karla\fP
-
-Bleach - \fIhttps://github.com/trishitdedhia/bleach\fP
-  
+To know more => man bleach
+If no manual entry exists, make sure bleach is up to date using Karla.

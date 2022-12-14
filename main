@@ -16,8 +16,9 @@ do
 
     elif [[ $1 == "--version" || $1 == "-v" ]]
     then
-        cat .version
+        head -1 .help
         exit 0
+
     elif [[ $1 == "-s" || $1 == "--save" ]]
     then
         echo "saving"
@@ -46,7 +47,7 @@ do
         fi
     else
         echo "Invalid usage."
-        echo "Use the '--help' flag to learn more."
+        echo "Try => man bleach"
         exit 1
     fi
 
